@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: black;
+color: green;
+}
+
+
+</style>
+</head>
+<body>
+    <p id="text-container"></p>
+
+    <script>
+      var txt1 = "https://2020galmi.github.io/resume";
+      var text = "HI, MY NAME IS OHTMANE ELGHALMI. I AM IN MY SECOND YEAR IN NETWORK AND SYSTEM ADMINISTRATION. I HAVE STRONG TECHNICAL SKILLS AS WELL AS EXCELLENT INTERPERSONAL SKILLS, ENABLING ME TO INTERACT WITH A WIDE RANGE OF PROBLEMS. I AM EAGER TO BE CHALLENGED IN ORDER TO GROW AND FURTHER IMPROVE MY IT SKILLS. MY GREATEST PASSION IN LIFE IS USING MY TECHNICAL SKILLS TO BENEFIT OTHER PEOPLE AND ORGANISATIONS.";
+
+
+
+      var container = document.getElementById("text-container");
+    
+      var i = 0;
+      var intervalId = setInterval(function() {
+        var currentChar = text[i];
+        container.textContent += currentChar;
+        i++;
+    
+        // Remove the interval once all the text has been written
+        if (i === text.length) {
+          clearInterval(intervalId);
+        }
+      }, 100); // Set the typing speed (100 milliseconds per character)
+    </script>
+    
+    <button onclick="window.open(txt1)">More info</button>
+
+
+</body>
+</html>
